@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>Portafolio Leonidas Esteban</title>
 </head>
 <body>
-    <header class="wrapp">
-            <figure class="logo">
-                <img src="img/logo.webp" alt="logo">
-            </figure>
-            <nav class="menu">
-                <ul>
-                    <li class="menu__elem">
-                        <a href="#">Portafolio</a>
-                    </li>
-                    <li class="menu__elem">
-                        <a href="#">Experiencia</a>
-                    </li>
-                    <li class="menu__elem" >
-                        <a href="#">Trabajemos juntos</a>
-                    </li>
-                </ul>
-            </nav>
+    <header>
+        <div class="wrapper">
+            <div class="__container">
+                <i class="fas fa-bars" id="menu-button"></i>
+                <figure class="logo">
+                    <img src="img/logo.png" height="50" alt="logo">
+                </figure>
+                <nav class="menu" id="menu">
+                    <ul>
+                        <li class="menu__elem">
+                            <a href="#">Portafolio</a>
+                        </li>
+                        <li class="menu__elem">
+                            <a href="#">Experiencia</a>
+                        </li>
+                        <li class="menu__elem" >
+                            <a href="#">Trabajemos juntos</a>
+                        </li>
+                    </ul>
+                </nav>
+             </div>
+        </div>
         </header>
 
-    <section class="hero wrapp">
-        <div>
+
+    <!-- <section class="hero wrapper">
+        <div class="hero__welcome">
             
-            <h1>Hola! soy <span>Leonidas Esteban</span>
-            Desarrollador <span>JavaScript</span> con
+            <h1>Hola! soy <span>Leonidas Esteban</span><br>
+            Desarrollador <span>JavaScript</span> con<br>
             pasion por la <span>enseñanza</span>
             </h1>
         
@@ -39,12 +46,12 @@
 
         <div class="hero__image">
 
-            <img src="img/hero.jpg" alt="hero-image">
+            <img src="img/hero1.jpg" alt="hero-image">
 
         </div>
     </section>
 
-    <section class="portfolio wrapper">
+    <section class="portfolio row">
         <h2>PORTAFOLIO (PROYECTOS DESTACADOS)</h2>
         
         <article class="portfolio__proyect">
@@ -100,6 +107,20 @@
                 <img src="img/platzi-video-react-native.png" alt="react-native">
             </figure>
         </article>
-    </section>
+    </section> -->
+
+<script>
+    $menuButton = document.querySelector("#menu-button");
+    $menu = document.querySelector("#menu");
+
+    // $menuButton.addEventListener("click", (e) => {
+    //     if ($menu.style.top =='-5000px'){
+    //                    $menu.style.top = '53px';
+    //                    return;
+    //                }
+    //                $menu.style.top ='-5000px';
+    // });
+
+</script>
 </body>
 </html>
