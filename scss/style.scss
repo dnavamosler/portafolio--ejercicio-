@@ -2,3 +2,48 @@
         Estilos para portafolio
 /* ------------------------------- */
 
+        // Variables
+@import "mixins/vars";
+
+        // estilos de fuentes
+@import "base/heading";
+
+        // Funciones
+@import "mixins/mixins";
+@import "mixins/functions";
+        // layout
+@import "layout/header";
+@import "layout/hero";
+@import "layout/portfolio";
+
+*{
+        box-sizing: border-box;
+}
+*,*::after,*::before{
+        box-sizing: inherit;
+}
+body,figure{
+        margin: 0;
+        font-family: $font;
+        font-size: $fs;
+}
+
+a{
+        text-decoration: none;
+}
+li{
+        list-style: none;
+}
+
+.hide{
+        display: none;
+}
+
+
+
+
+
+
+
+
+

@@ -1,4 +1,246 @@
 /* ------------------------------- *\
         Estilos para portafolio
 /* ------------------------------- */
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2em;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    /**
+        * 1. Centers the content. Yes, it's a bit opinionated.
+        * 2. See the "width vs max-width" section
+        * 3. See the "Additional Padding" section
+        */
+  }
+  .wrapper {
+    margin-right: auto;
+    /* 1 */
+    margin-left: auto;
+    /* 1 */
+    max-width: auto;
+    /* 2 */
+    padding-right: 40px;
+    /* 3 */
+    padding-left: 40px;
+    /* 3 */
+  }
+}
+
+.row {
+  max-width: 1024px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+header {
+  width: 100vw;
+  background-color: #1d252c;
+  -webkit-box-shadow: 0 2px 5px 1px #00000096;
+          box-shadow: 0 2px 5px 1px #00000096;
+  position: relative;
+  z-index: 10;
+}
+
+header .__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  position: relative;
+  z-index: 11;
+}
+
+@media only screen and (min-width: 768px) {
+  header .__container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 70px;
+  }
+}
+
+header .__container i {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  line-height: 40px;
+  text-align: center;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  header .__container i {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+  background-color: #1d252c;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    margin-left: auto;
+    display: block;
+    position: initial;
+  }
+}
+
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.menu ul li {
+  margin: 0 10px 10px 10px;
+  padding: 10px 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu ul li {
+    margin-bottom: 0;
+  }
+}
+
+.menu ul li a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.menu__elem:last-child {
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  background-color: #1d252c;
+}
+
+.hero__welcome {
+  position: relative;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__welcome h1 {
+  color: #fff;
+}
+
+.hero__welcome h1 span {
+  color: #026fff;
+}
+
+.hero__welcome::before {
+  content: '';
+  position: absolute;
+  width: 105%;
+  height: 100%;
+  background-color: #1d252c;
+  -webkit-transform: skewX(-10deg);
+          transform: skewX(-10deg);
+  z-index: -3;
+  top: 0;
+  left: 0;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 1;
+  margin-right: -40px;
+}
+
+.hero__image img {
+  max-width: 100%;
+  height: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body, figure {
+  margin: 0;
+  font-family: "arial";
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.hide {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */
