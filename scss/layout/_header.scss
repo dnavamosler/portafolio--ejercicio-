@@ -1,0 +1,80 @@
+header{         //capa de sombra y color
+    background-color: $primary-color;
+    box-shadow: 0 2px 5px 1px #00000096;
+    position: relative;
+    z-index: 300;
+
+
+    & .__container{     //contenedor -alineado
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        position: relative;
+        z-index: 11;
+        @include respond-to(768px){
+            justify-content: flex-start;
+             flex-direction: row;
+             height: 70px;
+        }
+        i{                  //menu hamburguesa
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, .8);
+            line-height: 40px;
+            text-align: center;
+            color: white;
+            @include respond-to(768px){
+                display: none;
+            }
+        }
+    }    
+}
+
+// Fin de contenedores
+
+.menu{
+   display: none;
+    width: 100%;
+    
+    @include respond-to(768px){ //menu se va a la derecha despues de 768
+        
+        display: flex;
+        position: initial;
+        justify-content: flex-end;
+    }
+
+    & ul{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        text-align: center;
+        @include respond-to(768px){
+            flex-direction: row;
+        }
+
+        li{
+            margin:0 10px 10px 10px;
+            padding: 10px 10px;
+            @include respond-to(768px){
+                margin-bottom: 0;
+            }
+            a{
+                color: $white;
+                font-weight: 600;
+            }  
+        }
+     
+    }
+    &__elem:last-child{        
+        border: 2px solid $white;
+        border-radius: 5px;
+    }
+    
+    
+}

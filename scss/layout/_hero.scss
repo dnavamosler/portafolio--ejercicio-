@@ -1,0 +1,87 @@
+.hero{
+    padding-top: 1px;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    background-color: $primary-color;
+    padding-top: 2em;
+    padding-bottom: 2em;
+   @include respond-to(1024px){
+       padding-top: 0;
+       padding-bottom: 0;
+   }
+
+   &__welcome{
+    
+       position: relative;
+       z-index: 1;
+       display: flex;
+       flex: 1;
+       @include respond-to(1024px){
+           width: 45%;
+           align-items: center;
+       }
+
+        &::before{
+            
+           @include respond-to(1024px){            
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width:110%;
+            height: 110%;
+            background-color: $primary-color;
+            transform: skewX(-10deg);
+           }
+       }
+
+       h1{
+           color: white;
+           font-size: 1.2em;
+           margin: 0;
+           line-height: 1.5em;
+           letter-spacing: -0.3px;
+           white-space: nowrap;
+           @include respond-to(425px){
+            font-size: 1.5em;
+           }
+           @include respond-to(768px){
+               font-size: 2em;
+           }
+
+           span{
+               color: #026fff;
+           }
+       }
+   }
+
+   &__image{
+       position: absolute;
+       top: 0;
+       left: 0;
+       right: 0;
+       bottom: 0;
+       width: 100%;
+       z-index: 0;
+
+       @include respond-to(1024px){
+           position: initial;
+           width: 55%;
+           margin-bottom: -5px;
+        
+       }
+       img{
+           width: 100%;
+           max-width: 100%;
+           object-fit: cover;
+       }
+   }
+   .wrapper{
+       
+       @include respond-to(1024px){
+           display: flex;
+           padding-right: 0;
+       }
+   }
+   
+}

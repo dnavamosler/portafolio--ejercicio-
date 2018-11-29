@@ -1,0 +1,22 @@
+.wrapper{
+    padding-left: 30px;
+    padding-right: 30px;
+    @include respond-to(768px){ //a partir de 768px se aplica un padding
+        @include wrapper(1024px) //auto hace referencia al max-width;
+    }
+
+
+}
+
+.row{
+    max-width: 1024px;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    }
+        
+        
+    
+
