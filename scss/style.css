@@ -226,9 +226,10 @@ header .__container i {
   margin: 0;
   line-height: 1.5em;
   letter-spacing: -0.3px;
+  white-space: nowrap;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 425px) {
   .hero__welcome h1 {
     font-size: 1.5em;
   }
