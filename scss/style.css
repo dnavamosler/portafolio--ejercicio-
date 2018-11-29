@@ -6,6 +6,11 @@ h1 {
   line-height: 1.2em;
 }
 
+.wrapper {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 @media only screen and (min-width: 768px) {
   .wrapper {
     /**
@@ -163,6 +168,114 @@ header .__container i {
 .menu__elem:last-child {
   border: 2px solid #fff;
   border-radius: 5px;
+}
+
+.hero {
+  padding-top: 1px;
+  position: relative;
+  height: auto;
+  overflow: hidden;
+  background-color: #1d252c;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.hero__welcome {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero__welcome {
+    width: 45%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero__welcome::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 110%;
+    height: 110%;
+    background-color: #1d252c;
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+}
+
+.hero__welcome h1 {
+  color: white;
+  font-size: 1.2em;
+  margin: 0;
+  line-height: 1.5em;
+  letter-spacing: -0.3px;
+}
+
+@media only screen and (min-width: 320px) {
+  .hero__welcome h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero__welcome h1 {
+    font-size: 2em;
+  }
+}
+
+.hero__welcome h1 span {
+  color: #026fff;
+}
+
+.hero__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero__image {
+    position: initial;
+    width: 55%;
+    margin-bottom: -5px;
+  }
+}
+
+.hero__image img {
+  width: 100%;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 0;
+  }
 }
 
 * {
