@@ -6,6 +6,11 @@ h1 {
   line-height: 1.2em;
 }
 
+.portfolio__desc h3, .portfolio__desc p {
+  margin-top: .3em;
+  margin-bottom: .3em;
+}
+
 .wrapper {
   padding-left: 30px;
   padding-right: 30px;
@@ -14,12 +19,10 @@ h1 {
 @media only screen and (min-width: 768px) {
   .wrapper {
     /**
-        * 1. Centers the content. Yes, it's a bit opinionated.
-        * 2. See the "width vs max-width" section
-        * 3. See the "Additional Padding" section
-        */
-  }
-  .wrapper {
+            * 1. Centers the content. Yes, it's a bit opinionated.
+            * 2. See the "width vs max-width" section
+            * 3. See the "Additional Padding" section
+            */
     margin-right: auto;
     /* 1 */
     margin-left: auto;
@@ -275,8 +278,117 @@ header .__container i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-right: 0;
   }
+}
+
+/*-------- $PORTFOLIO ---------*/
+.portfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio {
+    font-size: 16px;
+  }
+}
+
+.portfolio h2 {
+  color: #026fff;
+  font-weight: 700;
+  margin: 1em 0;
+  font-size: 1.3em;
+}
+
+.portfolio__proyect {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px 5px #5b5b5b1c;
+          box-shadow: 0px 0px 20px 5px #5b5b5b1c;
+  margin-bottom: 2.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding: 1.4em;
+  background-color: white;
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio__proyect {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.portfolio__proyect:last-of-type {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio__desc {
+    width: 50%;
+  }
+}
+
+.portfolio__desc h3 {
+  color: #1d252c;
+  margin-top: 0;
+  font-size: 1.3em;
+}
+
+.portfolio__desc p {
+  color: #6d6d6d;
+}
+
+.portfolio__desc p strong {
+  color: #1d252c;
+  margin-right: .3em;
+}
+
+.portfolio__desc p a {
+  color: #6d6d6d;
+}
+
+.portfolio__desc em, .portfolio__desc time, .portfolio__desc h4 {
+  display: inline-block;
+}
+
+.portfolio__desc .__info {
+  color: #1d252c;
+  line-height: 1.4em;
+  font-weight: 600;
+  font-size: 1em;
+  margin-top: 1.5em;
+}
+
+.portfolio__image {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  .portfolio__image {
+    width: 50%;
+  }
+}
+
+.portfolio__image img {
+  max-width: 100%;
 }
 
 * {
@@ -292,6 +404,10 @@ header .__container i {
 body, figure {
   margin: 0;
   font-family: "arial";
+}
+
+body {
+  background-color: #fafafa;
   font-size: 16px;
 }
 

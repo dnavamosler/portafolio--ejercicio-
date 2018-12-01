@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="scss/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
     <title>Portafolio Leonidas Esteban</title>
 </head>
+
 <body>
+
+    <!--
+      -- ──────────────────────────────────────────────────── I ──────────
+      --   :::::: H E A D E R : :  :   :    :     :        :          :
+      -- ──────────────────────────────────────────────────────────────
+      -->
+
+    
     <header>
         <div class="wrapper">
             <div class="__container">
@@ -24,96 +35,110 @@
                         <li class="menu__elem">
                             <a href="#">Experiencia</a>
                         </li>
-                        <li class="menu__elem" >
+                        <li class="menu__elem">
                             <a href="#">Trabajemos juntos</a>
                         </li>
                     </ul>
                 </nav>
-             </div>
+            </div>
         </div>
-        </header>
+    </header>
+    <!-- ──────────────────────────────────────────────────────────────────────────────── -->
+
+    <!--
+      -- ────────────────────────────────────────────────II──────────
+      --   :::::: H E R O : :  :   :    :     :        :          :
+      -- ──────────────────────────────────────────────────────────
+      -->
+
+    
+    <section class="hero">
+        <div class="wrapper">
+            <div class="hero__welcome">
+
+                <h1>Hola! soy <span>Leonidas Esteban</span><br>
+                    Desarrollador <span>JavaScript</span> con<br>
+                    pasion por la <span>enseñanza</span>
+                </h1>
+
+            </div>
+
+            <div class="hero__image">
+
+                <img src="img/hero1.jpg" width="500" height="300" alt="hero-image">
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ──────────────────────────────────────────────────────────────────────────────── -->
 
 
-      <section class="hero">
-          <div class="wrapper">
-                <div class="hero__welcome">
-            
-                        <h1>Hola! soy <span>Leonidas Esteban</span><br>
-                        Desarrollador <span>JavaScript</span> con<br>
-                        pasion por la <span>enseñanza</span>
-                        </h1>
-                    
-                    </div>
-            
-                    <div class="hero__image">
-            
-                        <img src="img/hero1.jpg" width="500"   height="300" alt="hero-image">
-            
-                    </div>
-        </div>
-    </section> 
-<!--
-    <section class="portfolio row">
-        <h2>PORTAFOLIO (PROYECTOS DESTACADOS)</h2>
+   <!--
+     -- ────────────────────────────────────────────────────────────────────  ──────────
+     --   :::::: I N I T   P O R T F O L I O : :  :   :    :     :        :          :
+     -- ──────────────────────────────────────────────────────────────────────────────
+     -->
+
+   
+
         
-        <article class="portfolio__proyect">
-            <h3>platzi Video</h3>
-            <small>React Native / React</small>
-            <h4>Fecha:</h4>
-            <time datetime="2018-07-01">    
-                01/07/2018            
-            </time>
-            <h4>Puedes verlo en:</h4>
-            <em><a href="www.platzi.com/native">www.platzi.com/native</a></em>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt aperiam fugiat accusamus voluptates dolor. Repellendus non neque quo ut vero perferendis omnis voluptas tempore magnam corporis, distinctio doloremque hic assumenda.
-            </p>
+    <section class="portfolio wrapper">
+        <h2>PORTAFOLIO (PROYECTOS DESTACADOS)</h2>
+
+        <article class="portfolio__proyect">
+            <div class="portfolio__desc">
+                <h3>platzi Video</h3>
+                <p><small>React Native / React</small></p>
+                <p>
+                    <strong>Fecha:</strong>
+                    01/07/2018
+                </p>
+                <p>
+                    <strong>Puedes verlo en:</strong>
+                    <a href="www.platzi.com/native">www.platzi.com/native</a>
+                </p>
+                <p class="__info">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt aperiam fugiat accusamus
+                    voluptates dolor. Repellendus non neque quo ut vero perferendis omnis voluptas tempore magnam
+                    corporis, distinctio doloremque hic assumenda.
+                </p>
+            </div>
             <figure class="portfolio__image">
                 <img src="img/platzi-video-react-native.png" alt="react-native">
             </figure>
         </article>
-
         <article class="portfolio__proyect">
-            <h3>platzi Video</h3>
-            <small>React Native / React</small>
-            <h4>Fecha:</h4>
-            <time datetime="2018-07-01">    
-                01/07/2018            
-            </time>
-            <h4>Puedes verlo en:</h4>
-            <em><a href="www.platzi.com/native">www.platzi.com/native</a></em>
-
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt aperiam fugiat accusamus voluptates dolor. Repellendus non neque quo ut vero perferendis omnis voluptas tempore magnam corporis, distinctio doloremque hic assumenda.
-            </p>
+            <div class="portfolio__desc">
+                <h3>platzi Video</h3>
+                <p><small>React Native / React</small></p>
+                <p>
+                    <strong>Fecha:</strong>
+                    01/07/2018
+                </p>
+                <p>
+                    <strong>Puedes verlo en:</strong>
+                    <a href="www.platzi.com/native">www.platzi.com/native</a>
+                </p>
+                <p class="__info">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt aperiam fugiat accusamus
+                    voluptates dolor. Repellendus non neque quo ut vero perferendis omnis voluptas tempore magnam
+                    corporis, distinctio doloremque hic assumenda.
+                </p>
+            </div>
             <figure class="portfolio__image">
                 <img src="img/platzi-video-react-native.png" alt="react-native">
             </figure>
         </article>
+        
+        <!-- ───────────────────────────────────────────────────────────────── -->
 
-        <article class="portfolio__proyect">
-            <h3>platzi Video</h3>
-            <small>React Native / React</small>
-            <h4>Fecha:</h4>
-            <time datetime="2018-07-01">    
-                01/07/2018            
-            </time>
-            <h4>Puedes verlo en:</h4>
-            <em><a href="www.platzi.com/native">www.platzi.com/native</a></em>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt aperiam fugiat accusamus voluptates dolor. Repellendus non neque quo ut vero perferendis omnis voluptas tempore magnam corporis, distinctio doloremque hic assumenda.
-            </p>
-            <figure class="portfolio__image">
-                <img src="img/platzi-video-react-native.png" alt="react-native">
-            </figure>
-        </article>
-    </section> -->
 
-<script>
-    $menuButton = document.querySelector("#menu-button");
-    $menu = document.querySelector("#menu");
+        <script>
+            $menuButton = document.querySelector("#menu-button");
+            $menu = document.querySelector("#menu");
 
     // $menuButton.addEventListener("click", (e) => {
     //     if ($menu.style.top =='-5000px'){
@@ -123,6 +148,7 @@
     //                $menu.style.top ='-5000px';
     // });
 
-</script>
+        </script>
 </body>
+
 </html>
