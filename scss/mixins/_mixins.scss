@@ -6,13 +6,13 @@
     }
 
     @mixin wrapper($max-width,$padding : $paddingW){
-
-        /**
-        * 1. Centers the content. Yes, it's a bit opinionated.
-        * 2. See the "width vs max-width" section
-        * 3. See the "Additional Padding" section
-        */
+               
         & {
+                /**
+            * 1. Centers the content. Yes, it's a bit opinionated.
+            * 2. See the "width vs max-width" section
+            * 3. See the "Additional Padding" section
+            */
             margin-right: auto; /* 1 */
             margin-left:  auto; /* 1 */
         
@@ -23,3 +23,7 @@
         }
     }
 
+    %margin{
+        margin-top: .3em;
+        margin-bottom: .3em;
+    }
