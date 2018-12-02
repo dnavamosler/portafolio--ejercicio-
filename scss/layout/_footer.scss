@@ -1,0 +1,19 @@
+/* $footer */ 
+
+.footer{
+
+    background-color: $primary-color;
+
+    .wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+
+        @include respond-to(768px){
+            flex-direction: row;
+        }
+    }
+    
+}
