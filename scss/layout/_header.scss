@@ -6,6 +6,9 @@ header{         //capa de sombra y color
     left: 0;
     z-index: 300;
     width: 100%;
+    @include respond-to(768px){
+        overflow: hidden;
+    }
 
     .wrapper{
         background-color: $primary-color;
@@ -62,10 +65,11 @@ header{         //capa de sombra y color
     z-index: -1;
     
     @include respond-to(768px){ //menu se va a la derecha despues de 768
-        
-        display: flex;
+        z-index: 0;
         position: initial;
         justify-content: flex-end;
+       
+        
     }
 
     & ul{
