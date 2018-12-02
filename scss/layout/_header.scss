@@ -1,8 +1,15 @@
 header{         //capa de sombra y color
     background-color: $primary-color;
     box-shadow: 0 2px 5px 1px #00000096;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: 300;
+    width: 100%;
+
+    .wrapper{
+        background-color: $primary-color;
+    }
 
 
     & .__container{     //contenedor -alineado
@@ -12,7 +19,7 @@ header{         //capa de sombra y color
         flex-direction: column;
         flex-wrap: nowrap;
         position: relative;
-        z-index: 11;
+    
         @include respond-to(768px){
             justify-content: flex-start;
              flex-direction: row;
@@ -20,6 +27,7 @@ header{         //capa de sombra y color
         }
         i{                  //menu hamburguesa
             position: absolute;
+            cursor: pointer;
             top: 5px;
             left: 10px;
             width: 40px;
@@ -38,9 +46,20 @@ header{         //capa de sombra y color
 
 // Fin de contenedores
 
+
+
 .menu{
-   display: none;
+   display:flex;
     width: 100%;
+    flex-flow: colum nowrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(29, 37, 44, 0.89);
+    width: calc(100% + 60px);
+    transition: .3s ease-in-out;
+    top: -300px;
+    z-index: -1;
     
     @include respond-to(768px){ //menu se va a la derecha despues de 768
         

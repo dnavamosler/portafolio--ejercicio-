@@ -107,8 +107,15 @@ header {
   background-color: #1d252c;
   -webkit-box-shadow: 0 2px 5px 1px #00000096;
           box-shadow: 0 2px 5px 1px #00000096;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 300;
+  width: 100%;
+}
+
+header .wrapper {
+  background-color: #1d252c;
 }
 
 header .__container {
@@ -128,7 +135,6 @@ header .__container {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   position: relative;
-  z-index: 11;
 }
 
 @media only screen and (min-width: 768px) {
@@ -146,6 +152,7 @@ header .__container {
 
 header .__container i {
   position: absolute;
+  cursor: pointer;
   top: 5px;
   left: 10px;
   width: 40px;
@@ -164,8 +171,27 @@ header .__container i {
 }
 
 .menu {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: colum nowrap;
+          flex-flow: colum nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background: rgba(29, 37, 44, 0.89);
+  width: calc(100% + 60px);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  top: -300px;
+  z-index: -1;
 }
 
 @media only screen and (min-width: 768px) {

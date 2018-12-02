@@ -20,14 +20,14 @@
       -->
 
 
-    <header>
+    <header id="header">
         <div class="wrapper">
             <div class="__container">
                 <i class="fas fa-bars" id="menu-button"></i>
                 <figure class="logo">
                     <img src="img/logo.png" height="50" alt="logo">
                 </figure>
-                <nav class="menu" id="menu">
+                <nav class="menu oculto" id="menu">
                     <ul>
                         <li class="menu__elem">
                             <a href="#">Portafolio</a>
@@ -52,7 +52,7 @@
       -->
 
 
-    <section class="hero">
+    <section class="hero" id="hero">
         <div class="wrapper">
             <div class="hero__welcome">
 
@@ -287,14 +287,25 @@
     <script>
         $menuButton = document.querySelector("#menu-button");
         $menu = document.querySelector("#menu");
+        $hero = document.querySelector("#hero");
+        $header = document.querySelector("#header");
+        $headerH = $header.offsetHeight + 'px';
 
-    // $menuButton.addEventListener("click", (e) => {
-    //     if ($menu.style.top =='-5000px'){
-    //                    $menu.style.top = '53px';
-    //                    return;
-    //                }
-    //                $menu.style.top ='-5000px';
-    // });
+        $hero.style.marginTop = $headerH;
+        
+
+// document.body.classList.toggle('anotherClass');
+
+    $menuButton.addEventListener("click", (e) => {
+        
+        if ($menu.classList.contains('oculto')) {
+            $menu.style.top = $headerH;
+            $menu.classList.remove('oculto');
+            return;
+        }
+        $menu.style.top = '-300px';
+        $menu.classList.add('oculto');
+    });
 
     </script>
 </body>
