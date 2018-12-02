@@ -9,16 +9,8 @@
     @include respond-to(1024px){
         font-size: 16px;
     }
-    h2{
-        color: $secundary-color;
-        font-weight: 700;
-        margin: 1em 0;
-        font-size: 1.3em;
-    }
     &__proyect{
-        border: 1px solid transparent;
-        border-radius: 10px;
-        box-shadow: 0px 0px 20px 5px #5b5b5b1c;
+        @extend %caja;
         margin-bottom: 2.5em;
         display: flex;
         flex-direction: column;
@@ -38,15 +30,9 @@
     }
     
     &__desc{
-        
+        font-size: 14px;
         @include respond-to(1024px){
             width: 50%;
-        }
-        h3{
-            color: $primary-color;
-            margin-top: 0;
-            font-size: 1.3em;
-            @extend %margin;
         }
         p{
             @extend %margin;  

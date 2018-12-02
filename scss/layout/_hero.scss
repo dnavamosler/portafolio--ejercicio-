@@ -35,24 +35,7 @@
            }
        }
 
-       h1{
-           color: white;
-           font-size: 1.2em;
-           margin: 0;
-           line-height: 1.5em;
-           letter-spacing: -0.3px;
-           white-space: nowrap;
-           @include respond-to(425px){
-            font-size: 1.5em;
-           }
-           @include respond-to(768px){
-               font-size: 2em;
-           }
-
-           span{
-               color: #026fff;
-           }
-       }
+       
    }
 
    &__image{

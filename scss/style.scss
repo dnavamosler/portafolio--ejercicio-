@@ -5,17 +5,19 @@
         // Variables
 @import "mixins/vars";
 
-        // estilos de fuentes
-@import "base/heading";
+
 
         // Funciones
 @import "mixins/mixins";
 @import "mixins/functions";
+
+        // estilos de fuentes
+        @import "base/heading";
         // layout
 @import "layout/header";
 @import "layout/hero";
 @import "layout/portfolio";
-
+@import "layout/experience";
 *{
         box-sizing: border-box;
 }

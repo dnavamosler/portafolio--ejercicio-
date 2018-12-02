@@ -1,14 +1,43 @@
 /* ------------------------------- *\
         Estilos para portafolio
 /* ------------------------------- */
-h1 {
-  font-size: 2.5em;
-  line-height: 1.2em;
-}
-
-.portfolio__desc h3, .portfolio__desc p {
+h3, .portfolio__desc p {
   margin-top: .3em;
   margin-bottom: .3em;
+}
+
+.portfolio__proyect, .experience__element, .experience__element__info {
+  border: 1px solid transparent;
+  border-radius: .5em;
+  -webkit-box-shadow: 0px 0px 20px 5px #5b5b5b1c;
+          box-shadow: 0px 0px 20px 5px #5b5b5b1c;
+  overflow: hidden;
+}
+
+.experience__element__info .btn {
+  padding: 0.3em 2em;
+  border: 1px solid #026fff;
+  border-radius: 0.5em;
+  background-color: transparent;
+  color: #026fff;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+  .experience__element__info .btn {
+    padding: .3em 2.5em;
+  }
+}
+
+.experience__element__info .btn:hover {
+  background-color: #026fff;
+  color: white;
 }
 
 .wrapper {
@@ -36,21 +65,42 @@ h1 {
   }
 }
 
-.row {
-  max-width: 1024px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: 0 auto;
+h1 {
+  color: white;
+  font-size: 1.2em;
+  margin: 0;
+  line-height: 1.5em;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+}
+
+@media only screen and (min-width: 425px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h1 span {
+  color: #026fff;
+}
+
+h2 {
+  color: #026fff;
+  font-weight: 700;
+  margin: 1em 0;
+  font-size: 1.3em;
+}
+
+h3 {
+  color: #1d252c;
+  margin-top: 0;
+  font-size: 1.4em;
 }
 
 header {
@@ -223,31 +273,6 @@ header .__container i {
   }
 }
 
-.hero__welcome h1 {
-  color: white;
-  font-size: 1.2em;
-  margin: 0;
-  line-height: 1.5em;
-  letter-spacing: -0.3px;
-  white-space: nowrap;
-}
-
-@media only screen and (min-width: 425px) {
-  .hero__welcome h1 {
-    font-size: 1.5em;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .hero__welcome h1 {
-    font-size: 2em;
-  }
-}
-
-.hero__welcome h1 span {
-  color: #026fff;
-}
-
 .hero__image {
   position: absolute;
   top: 0;
@@ -301,18 +326,7 @@ header .__container i {
   }
 }
 
-.portfolio h2 {
-  color: #026fff;
-  font-weight: 700;
-  margin: 1em 0;
-  font-size: 1.3em;
-}
-
 .portfolio__proyect {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 20px 5px #5b5b5b1c;
-          box-shadow: 0px 0px 20px 5px #5b5b5b1c;
   margin-bottom: 2.5em;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,16 +354,14 @@ header .__container i {
   margin-bottom: 0;
 }
 
+.portfolio__desc {
+  font-size: 14px;
+}
+
 @media only screen and (min-width: 1024px) {
   .portfolio__desc {
     width: 50%;
   }
-}
-
-.portfolio__desc h3 {
-  color: #1d252c;
-  margin-top: 0;
-  font-size: 1.3em;
 }
 
 .portfolio__desc p {
@@ -389,6 +401,72 @@ header .__container i {
 
 .portfolio__image img {
   max-width: 100%;
+}
+
+/* $ EXPERIENCE */
+.experience__elements {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  grid-gap: 1.5em;
+  grid-auto-flow: row;
+}
+
+@media only screen and (min-width: 768px) {
+  .experience__elements {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+  }
+}
+
+.experience__element {
+  position: relative;
+  background-color: #f4fbff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.experience__element__info {
+  margin: 1.3em;
+  background-color: white;
+  padding: 1.3em;
+  margin-top: -4em;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.experience__element__info p {
+  color: #6d6d6d;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+
+.experience__element img {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 * {
