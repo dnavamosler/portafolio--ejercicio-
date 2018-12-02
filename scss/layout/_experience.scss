@@ -1,7 +1,11 @@
 /* $ EXPERIENCE */
 
 .experience{
+    font-size: 12px;
 
+    @include respond-to(1024px){
+        font-size: 16px;
+    }
     &__elements{
         display: grid;
         grid-template-columns: 1fr;

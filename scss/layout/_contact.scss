@@ -1,0 +1,110 @@
+/* $contact */
+
+.contact{
+    background-color: $secundary-color;
+    font-size: 12px;
+    .wrapper{
+        
+    
+    @include respond-to(1024px){
+        font-size: 16px;
+    }
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-to(768px){
+        flex-direction: row;
+    }
+    }
+
+    &__element{
+        width: 100%;
+        @include respond-to(768px){
+            width: 50%;
+        }
+    }
+
+    &__form{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+        @include respond-to(768px){
+            align-items: flex-start;
+        }
+        h2{
+            color: white;
+        }
+        >*{
+            margin-bottom: 1em;
+        }
+        
+        .input{
+            padding: 1em 2em;
+            border-radius: 5px;
+            font-weight: bold;
+            border: 1px solid $ligth-grey;
+            position: relative;
+            background-color: white;
+            padding: .6em;
+            display: flex;
+            flex-flow: row nowrap;
+            max-width: 100%;
+            i{
+                color: $ligth-grey;
+                font-size: 1.5em;
+            }
+            input{
+                border: none;
+                background: none;
+                padding-left: 10px;
+                outline: none;
+                font-size: 1.5em;
+                color: $ligth-grey;
+            }
+
+            
+        }
+        .btn{
+            @extend %btn;
+            border-color: white;
+            color: white;
+            margin: 0;
+
+            &:hover{
+                background: white;
+                color: $secundary-color;
+            }
+        }
+    }
+
+    &__social{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 2em 0;
+        margin-bottom: 0;
+
+        @include respond-to(768px){
+            justify-content: flex-end;
+        }
+
+        a{
+            transition: .3s;
+            margin: 0 1em;
+            i{
+                color: white;
+                font-size: 4em;
+                cursor: pointer;
+            }
+        &:hover{
+            transform: scale(1.2);
+        }
+        }
+    }
+}

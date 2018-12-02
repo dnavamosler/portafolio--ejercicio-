@@ -18,6 +18,7 @@
 @import "layout/hero";
 @import "layout/portfolio";
 @import "layout/experience";
+@import "layout/contact";
 *{
         box-sizing: border-box;
 }
@@ -46,7 +47,10 @@ li{
         display: none;
 }
 
-
+section{
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
 
 
 
